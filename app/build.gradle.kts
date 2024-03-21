@@ -35,6 +35,7 @@ android {
     }
     buildFeatures{
         viewBinding = true
+        mlModelBinding = true
     }
 }
 
@@ -48,6 +49,10 @@ dependencies {
 
     //sdp dependency
     implementation ("com.intuit.sdp:sdp-android:1.1.0")
+
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
+    implementation(libs.tensorflow.lite.gpu)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
